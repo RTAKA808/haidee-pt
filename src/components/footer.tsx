@@ -27,7 +27,7 @@ export default function Footer() {
             Contact Us
           </Link>
           <Button className="bg-accent hover:bg-accent-foreground">
-            <Link href="/appointment" className="text-foreground">
+            <Link href="/appointment" className="text-primary-foreground">
               Book An Appointment
             </Link>
           </Button>
