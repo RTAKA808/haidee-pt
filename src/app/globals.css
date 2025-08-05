@@ -3,13 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme: {
-  extend:{
-    colors:{
-    }
-  }
-}
-  inline {
+@theme {
+  /* shadcn/ui semantic colors - these extend the default theme */
+  --color-header: var(--header);
+  --color-footer: var(--footer);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -50,21 +47,23 @@
 }
 
 :root {
+  --header: #C9E4C5;
+  --footer: #C9E4C5;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #f2ead8;
+  --foreground: #2E2E2E;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --primary: #BBAED8;
+  --primary-foreground: #ffffff;
+  --secondary: #C9E4C5;
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --muted: #E5E7EB;
+  --muted-foreground:  #474343;
+  --accent: #b886ed;
+  --accent-foreground: #c49dee;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
