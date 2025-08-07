@@ -29,13 +29,17 @@ export default function Hero() {
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <Button className="bg-accent text-primary-foreground hover:bg-accent/50 px-6 py-3 text-base rounded-xl">
-              Schedule a Session
+              <Link href="/appointment">
+                Schedule a Session
+              </Link>
             </Button>
             <Button
               variant="outline"
               className="border-primary text-foreground hover:bg-accent hover:text-muted-foreground px-6 py-3 text-base rounded-xl"
             >
-              Learn More
+              <Link href="/contact">
+                Learn More
+              </Link>
             </Button>
           </div>
         </div>
