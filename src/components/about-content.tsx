@@ -7,7 +7,7 @@ export default function About() {
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-6 gap-8 lg:gap-12 items-center lg:items-start">
         <div className="flex-shrink-0">
           <Image
-            src="/assets/haideeprofile.jpeg"
+            src="/assets/haideeprofile.png"
             alt="Haidee Profile Picture"
             height={500}
             width={400}

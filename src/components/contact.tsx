@@ -221,7 +221,7 @@ export default function Contact() {
               type="submit" 
               disabled={isSubmitting}
               size="lg"
-              className="px-8"
+              className="px-8 bg-accent text-primary-foreground"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>

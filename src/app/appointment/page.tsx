@@ -2,7 +2,7 @@ import Contact from "@/components/contact";
 
 export default function AppointmentPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-">
       <div className="w-full max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Book an Appointment</h1>
