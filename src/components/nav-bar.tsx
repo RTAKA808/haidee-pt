@@ -20,10 +20,9 @@ export default function Navbar(){
                 <div className="flex w-full items-end justify-end py-4 px-4 md:pr-20">
                 <div className="flex gap-2 md:gap-6 items-center">
                     
-                    <Button className="bg-accent hover:bg-accent/50 text-xs md:text-sm px-2 md:px-4">
-                    <Link href="/appointment" className="text-primary-foreground">
-                        <span className="hidden sm:inline">Book An Appointment</span>
-                        <span className="sm:hidden">Book</span>
+                    <Button className="bg-accent hover:bg-accent/50 text-xs md:text-sm px-3 py-2 md:px-4">
+                    <Link href="/appointment" className="text-primary-foreground whitespace-nowrap">
+                        Book An Appointment
                     </Link>
                     </Button>
                     <Link href="/contact" className="text-foreground">
