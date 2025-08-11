@@ -13,16 +13,17 @@ export default function Navbar(){
                         alt="Haidee Sui Logo"
                         height={300}
                         width={120}
-                        className="object-contain"
+                        className="object-contain pt-4"
                         />
                     </Link>
                     </Button>
-                <div className="flex w-full items-end justify-end py-4 pr-20">
-                <div className="flex  gap-6 items-center">
+                <div className="flex w-full items-end justify-end py-4 px-4 md:pr-20">
+                <div className="flex gap-2 md:gap-6 items-center">
                     
-                    <Button className="bg-accent hover:bg-accent/50">
+                    <Button className="bg-accent hover:bg-accent/50 text-xs md:text-sm px-2 md:px-4">
                     <Link href="/appointment" className="text-primary-foreground">
-                        Book An Appointment
+                        <span className="hidden sm:inline">Book An Appointment</span>
+                        <span className="sm:hidden">Book</span>
                     </Link>
                     </Button>
                     <Link href="/contact" className="text-foreground">

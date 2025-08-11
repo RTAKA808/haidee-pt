@@ -15,7 +15,7 @@ export default function Hero() {
                 alt="Haidee Sui Physical Therapy Logo"
                 width={600}
                 height={180}
-                className="object-contain"
+                className="object-contain max-w-full h-auto"
               />
             </Link>
           </div>
