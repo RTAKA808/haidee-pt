@@ -1,6 +1,6 @@
 export default function Philosophy() {
   return (
-    <div className="flex flex-col w-full items-center justify-center bg-primary">
+    <div className="flex flex-col w-full h-screen justify-center bg-primary">
       <h1 className="text-4xl font-bold py-12 text-center">Philosophy of Care</h1>
       <div className="flex flex-col max-w-4xl mx-auto px-6 gap-8 items-center pb-12">
         <div className="flex-1 space-y-6">
