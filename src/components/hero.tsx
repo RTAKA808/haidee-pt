@@ -37,7 +37,7 @@ export default function Hero() {
               variant="outline"
               className="border-primary text-foreground hover:bg-accent hover:text-muted-foreground px-6 py-3 text-base rounded-xl"
             >
-              <Link href="/contact">
+              <Link href="/philosophy">
                 Learn More
               </Link>
             </Button>

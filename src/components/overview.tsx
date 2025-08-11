@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Overview() {
     return (
@@ -56,6 +58,13 @@ export default function Overview() {
                         Understand your body. Learn how to move, breathe, and live in ways that support long-term healing and vitality.
                         </p>
                     </div>
+                </div>
+                <div className="flex justify-center mt-8">
+                    <Button className="bg-accent text-primary-foreground hover:bg-accent/50 px-6 py-3 text-base rounded-xl">
+                        <Link href="/services">
+                            Learn More About Our Services
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </div>
