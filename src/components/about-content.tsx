@@ -15,38 +15,41 @@ export default function About() {
           />
         </div>
         <div className="flex-1 space-y-6 pb-6">
-            <p className="text-lg leading-relaxed mb-6">
-              After years of working in the tech industry, I felt a strong pull
-              toward more hands-on, human-centered work. Having grown up playing
-              competitive basketball, I was no stranger to injuries and physical
-              recovery.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Through my own rehabilitation experiences, I developed a
-              deep appreciation for the healing process and the people who guided me
-              through it. This personal history, coupled with my natural curiosity
-              and empathy, inspired me to pursue a new path in physical therapy.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              I bring a passionate, patient-centered approach to every session, rooted
-              in collaboration, education, and empowerment. My goal is not just to
-              treat symptoms, but to help you understand your body and feel
-              confident in your journey toward wellness.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Influenced by my upbringing in Eastern medicine and my Western medical education, I&apos;ve always
-              sought a bridge between the two. That search led me to Fascial
-              Counterstrain—a powerful technique that aligns with my holistic
-              philosophy. I continue to train and deepen my knowledge in this
-              method, integrating it into care that supports the whole person.
-            </p>
-            <p className="text-lg leading-relaxed">
-              For the past three years, I&apos;ve worked in an outpatient hospital setting,
-              treating a wide range of patients—from youth as young as 9 to adults
-              in their late 90s. My focus has been in orthopedics and chronic pain
-              care, helping individuals restore function, reduce pain, and reclaim
-              their quality of life.
-            </p>
+          <p className="text-lg leading-relaxed mb-6">
+            After years of working in the Human Resources tech industry, I knew
+            I was meant for something more—something that would challenge me,
+            fulfill me, and make a tangible difference in people&apos;s lives. Sports
+            had always been a big part of my world, especially competitive
+            basketball. Along with the love of the game came my fair share of
+            injuries, and with them, countless hours of rehabilitation. Those
+            experiences left a lasting impression—not just the relief of
+            healing, but the compassion, skill, and encouragement of the people
+            who helped me get there.
+          </p>
+          <p className="text-lg leading-relaxed mb-6">
+            That blend of personal experience and a lifelong curiosity about the
+            human body eventually led me to my true calling: physical therapy.
+            After earning my Doctor of Physical Therapy degree from the
+            University of California, San Francisco and San Francisco State
+            University, I pursued additional training through the Jones
+            Institute in Fascial Counterstrain—a technique that aligns with my
+            holistic philosophy of care. I continue to train and deepen my
+            knowledge in this method, integrating it into treatment that
+            supports the whole person.
+          </p>
+          <p className="text-lg leading-relaxed mb-6">
+            For the past three years, I&apos;ve worked in an outpatient hospital
+            setting, treating patients from ages 9 to late 90s. My focus has
+            been in orthopedics and chronic pain care, helping individuals
+            restore function, reduce pain, and reclaim their quality of life.
+          </p>
+          <p className="text-lg leading-relaxed mb-6">
+            Today, I bring an empathetic, patient-centered approach to every
+            session. My goal is to go beyond treating symptoms—to help you truly
+            understand your body, build confidence in your movement, and feel
+            empowered in your journey toward lasting wellness. I look forward to
+            working with you.
+          </p>
         </div>
       </div>
     </div>
