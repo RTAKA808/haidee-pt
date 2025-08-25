@@ -9,15 +9,13 @@ export default function Hero() {
       <div className="bg-primary text-foreground py-10 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="flex justify-center">
-            <Link href="/">
               <Image
-                src="/assets/heidi-logo.png"
+                src="/assets/haidee-logo.png"
                 alt="Haidee Sui Physical Therapy Logo"
                 width={600}
                 height={180}
-                className="object-contain"
+                className="object-contain max-w-full h-auto"
               />
-            </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">
             Empowering movement. Healing through connection
