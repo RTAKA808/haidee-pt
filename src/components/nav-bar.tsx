@@ -23,7 +23,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Center Logo */}
+          {/* Center Logo
           <div className="flex-1 flex justify-center">
             <Link href="/">
               <Image
@@ -34,7 +34,7 @@ export default function Navbar() {
                 className="object-contain"
               />
             </Link>
-          </div>
+          </div> */}
 
           {/* Right CTA Button and Social Media */}
           <div className="flex items-center space-x-4">
@@ -55,7 +55,7 @@ export default function Navbar() {
                 />
               </Link>
               <Link 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/haideesuipt/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity duration-200"

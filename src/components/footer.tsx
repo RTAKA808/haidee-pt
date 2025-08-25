@@ -25,7 +25,7 @@ export default function Footer() {
               HAIDEE SUI PHYSICAL THERAPY
             </p>
             <p className="text-muted-foreground">
-              San Bruno, CA
+              Burlingame, CA
             </p>
             <p className="text-muted-foreground">
               <Link 
@@ -54,7 +54,7 @@ export default function Footer() {
               />
             </Link>
             <Link 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/haideesuipt/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity duration-200"

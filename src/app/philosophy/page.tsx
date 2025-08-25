@@ -9,7 +9,7 @@ export default function Philosophy() {
           <p className="text-lg leading-relaxed mb-6">
             Healing is never one-size-fits-all. I believe in collaborative,
             patient-drive care—where your goals and experiences are central to
-            the treatment process. Together, we’ll create a space where you feel
+            the treatment process. Together, we&apos;ll create a space where you feel
             seen, supported, and empowered to take charge of your health. I also
             believe that treatment should educate as much as it heals.
             Understanding why something hurts is just as important as how we fix
@@ -19,7 +19,6 @@ export default function Philosophy() {
             deeper understanding of their body and the tools to support their
             long-term health.
           </p>
-
         </div>
       </div>
     </div>

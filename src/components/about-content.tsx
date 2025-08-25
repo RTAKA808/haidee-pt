@@ -7,7 +7,7 @@ export default function About() {
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-6 gap-8 lg:gap-12 items-center lg:items-start">
         <div className="flex-shrink-0">
           <Image
-            src="/assets/haideeprofile.png"
+            src="/assets/haideeprofile.jpg"
             alt="Haidee Profile Picture"
             height={500}
             width={400}
@@ -18,37 +18,35 @@ export default function About() {
           <p className="text-lg leading-relaxed mb-6">
             After years of working in the Human Resources tech industry, I knew
             I was meant for something more—something that would challenge me,
-            fulfill me, and make a tangible difference in people&apos;s lives. Sports
-            had always been a big part of my world, especially competitive
+            fulfill me, and make a tangible difference in people’s lives. Sports
+            has always been a big part of my world, especially competitive
             basketball. Along with the love of the game came my fair share of
             injuries, and with them, countless hours of rehabilitation. Those
-            experiences left a lasting impression—not just the relief of
-            healing, but the compassion, skill, and encouragement of the people
-            who helped me get there.
+            experiences left a lasting impression—it wasn&apos;t just the relief of
+            healing, but also the compassion, skill, and encouragement of the
+            people who helped me recover.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            That blend of personal experience and a lifelong curiosity about the
-            human body eventually led me to my true calling: physical therapy.
-            After earning my Doctor of Physical Therapy degree from the
-            University of California, San Francisco and San Francisco State
-            University, I pursued additional training through the Jones
-            Institute in Fascial Counterstrain—a technique that aligns with my
-            holistic philosophy of care. I continue to train and deepen my
-            knowledge in this method, integrating it into treatment that
-            supports the whole person.
+            That blend of personal experience and my curiosity about the human
+            body eventually led me to my passion: physical therapy. After
+            earning my Doctor of Physical Therapy degree from the University of
+            California, San Francisco and San Francisco State University, I
+            pursued additional training through the Jones Institute in Fascial
+            Counterstrain—a technique that aligns with my holistic philosophy of
+            care.
           </p>
           <p className="text-lg leading-relaxed mb-6">
             For the past three years, I&apos;ve worked in an outpatient hospital
-            setting, treating patients from ages 9 to late 90s. My focus has
-            been in orthopedics and chronic pain care, helping individuals
+            setting, treating patients from ages 9 to late 90&apos;s. My focus
+            has been in orthopedics and chronic pain care, helping individuals
             restore function, reduce pain, and reclaim their quality of life.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            Today, I bring an empathetic, patient-centered approach to every
-            session. My goal is to go beyond treating symptoms—to help you truly
-            understand your body, build confidence in your movement, and feel
-            empowered in your journey toward lasting wellness. I look forward to
-            working with you.
+            When treating patients, I bring an empathetic, patient-centered
+            approach to every session. My goal is to go beyond treating
+            symptoms—to help you truly understand your body, build confidence in
+            your movement, and feel empowered in your journey toward lasting
+            wellness. I look forward to working with you.
           </p>
         </div>
       </div>
