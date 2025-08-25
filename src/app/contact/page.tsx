@@ -10,5 +10,5 @@ export default function ContactPage() {
 
 export const metadata = {
   title: "Contact Us - Haidee PT",
-  description: "Get in touch with Haidee for personalized physical therapy. Send us a message and we'll get back to you within 24 hours.",
+  description: "Get in touch with Haidee for personalized physical therapy. Send us a message and we&apos;ll get back to you within 24 hours.",
 };

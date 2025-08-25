@@ -72,7 +72,7 @@ export default function Services() {
           </div>
 
           <p className="text-lg leading-relaxed">
-            Whether you're recovering from injury, managing chronic
+            Whether you&apos;re recovering from injury, managing chronic
             pain, or simply seeking a more connected relationship with your
             body, I provide care that respects your goals and supports your
             overall well-being.
