@@ -18,7 +18,7 @@ export default function Hero() {
               />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            Empowering movement. Healing through connection
+            Restore. Rebuild. Renew.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
             Personalized physical therapy to help you heal, move, and thrive.
