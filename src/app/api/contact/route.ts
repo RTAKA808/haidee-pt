@@ -101,7 +101,7 @@ function generateThankYouEmail(formData: ContactFormData): string {
           <p>Your message has been received</p>
         </div>
         <div class="content">
-          <p>Thank you for reaching out! I've received your message about <span class="highlight">"${formData.subject}"</span> and I'm excited to help you on your wellness journey.</p>
+          <p>Thank you for reaching out! I&apos;ve received your message about <span class="highlight">"${formData.subject}"</span> and I&apos;m excited to help you on your wellness journey.</p>
           
           <div class="cta-box">
             <p><strong>What happens next:</strong></p>
@@ -121,7 +121,7 @@ function generateThankYouEmail(formData: ContactFormData): string {
           <em>Doctor of Physical Therapy</em></p>
         </div>
         <div class="footer">
-          <p>This is an automated confirmation email. Please don't reply to this message.</p>
+          <p>This is an automated confirmation email. Please don&apos;t reply to this message.</p>
         </div>
       </div>
     </body>
