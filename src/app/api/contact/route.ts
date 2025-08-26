@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from 'resend';
 
+import { logToGoogleSheets } from '@/lib/googleSheets';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactFormData {
@@ -198,6 +200,12 @@ export async function POST(request: NextRequest) {
         to: [body.email],
         subject: 'Thank you for contacting me - Message Received',
         html: thankYouEmailHtml,
+      });
+
+      // Log to Google Sheets (after successful email sending)
+      await logToGoogleSheets({
+        ...body,
+        formType: 'Contact Form'
       });
 
       return NextResponse.json({ success: true });
