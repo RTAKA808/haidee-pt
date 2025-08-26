@@ -31,14 +31,14 @@ export default function Hero() {
                 Schedule a Session
               </Link>
             </Button>
-            <Button
+            {/* <Button
               variant="outline"
               className="border-primary text-foreground hover:bg-accent hover:text-muted-foreground px-6 py-3 text-base rounded-xl"
             >
               <Link href="/philosophy">
                 Learn More
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

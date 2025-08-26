@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from 'resend';
 
+import { logToGoogleSheets } from '@/lib/googleSheets';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactFormData {
@@ -87,7 +89,7 @@ function generateThankYouEmail(formData: ContactFormData): string {
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background-color: #4B2A74; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .header { background-color: #F6F5F0; color: black; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
         .content { padding: 30px; background-color: #f9f9f9; border-radius: 0 0 8px 8px; }
         .highlight { color: #4B2A74; font-weight: bold; }
         .footer { text-align: center; padding: 20px; font-size: 14px; color: #666; }
@@ -97,6 +99,7 @@ function generateThankYouEmail(formData: ContactFormData): string {
     <body>
       <div class="container">
         <div class="header">
+          <img src="https://haideesuipt.com/assets/haidee-logo.png" alt="Haidee PT Logo" style="max-width: 200px; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
           <h1>Thank You, ${formData.name}!</h1>
           <p>Your message has been received</p>
         </div>
@@ -107,17 +110,17 @@ function generateThankYouEmail(formData: ContactFormData): string {
             <p><strong>What happens next:</strong></p>
             <ul>
               <li>I'll review your message carefully</li>
-              <li>You'll hear back from me within <span class="highlight">24 hours</span></li>
+              <li>You'll hear back from me within <span class="highlight">1-3 business days</span></li>
               <li>I'll contact you via your preferred method: <span class="highlight">${formData.preferredContact}</span></li>
             </ul>
           </div>
           
-          <p>In the meantime, feel free to explore more about my approach to physical therapy and the services I offer on my website.</p>
+          <p>In the meantime, feel free to explore more about my approach to physical therapy and the services I offer on my <a href="https://haideesuipt.com/" style="color: #4B2A74; text-decoration: none; font-weight: bold;">website</a>.</p>
           
           <p>Looking forward to connecting with you soon!</p>
           
           <p><strong>Warm regards,</strong><br>
-          Haidee<br>
+          Haidee Sui<br>
           <em>Doctor of Physical Therapy</em></p>
         </div>
         <div class="footer">
@@ -197,6 +200,12 @@ export async function POST(request: NextRequest) {
         to: [body.email],
         subject: 'Thank you for contacting me - Message Received',
         html: thankYouEmailHtml,
+      });
+
+      // Log to Google Sheets (after successful email sending)
+      await logToGoogleSheets({
+        ...body,
+        formType: 'Contact Form'
       });
 
       return NextResponse.json({ success: true });

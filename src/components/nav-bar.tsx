@@ -4,20 +4,20 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-header border-b border-border py-4">
+    <nav className="w-full bg-background border-b border-border py-4">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Left Navigation */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 sm:space-x-8">
             <Link 
               href="/" 
-              className="text-foreground hover:text-accent font-medium transition-colors duration-200"
+              className="text-foreground hover:text-accent font-medium transition-colors duration-200 text-sm sm:text-base"
             >
               Home
             </Link>
             <Link 
               href="/contact" 
-              className="text-foreground hover:text-accent font-medium transition-colors duration-200"
+              className="text-foreground hover:text-accent font-medium transition-colors duration-200 text-sm sm:text-base"
             >
               Contact Us
             </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Right CTA Button and Social Media */}
           <div className="flex items-center space-x-4">
             {/* Social Media Icons */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <Link 
                 href="https://facebook.com" 
                 target="_blank" 
@@ -49,9 +49,9 @@ export default function Navbar() {
                 <Image
                   src="/assets/facebook.png"
                   alt="Facebook"
-                  width={20}
-                  height={20}
-                  className="object-contain"
+                  width={28}
+                  height={28}
+                  className="object-contain sm:w-5 sm:h-5"
                 />
               </Link>
               <Link 
@@ -63,9 +63,9 @@ export default function Navbar() {
                 <Image
                   src="/assets/instagram.png"
                   alt="Instagram"
-                  width={20}
-                  height={20}
-                  className="object-contain"
+                  width={28}
+                  height={28}
+                  className="object-contain sm:w-5 sm:h-5"
                 />
               </Link>
             </div>

@@ -231,7 +231,7 @@ export default function Contact() {
           {submitStatus === "success" && (
             <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-center">
               <p className="font-medium">Thank you for your message!</p>
-              <p className="text-sm mt-1">I&apos;ll get back to you within 24 hours.</p>
+              <p className="text-sm mt-1">I&apos;ll get back to you within 1-3 business days.</p>
             </div>
           )}
 

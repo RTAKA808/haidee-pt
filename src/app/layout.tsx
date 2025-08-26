@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import type { PropsWithChildren } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Header/>
         <main className="flex-1"> {children} </main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

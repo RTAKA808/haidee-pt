@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-footer border-t border-border py-12">
+    <footer className="w-full bg-background border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-6">
           {/* Logo */}
