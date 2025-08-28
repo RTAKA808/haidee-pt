@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section>
-      <div className="bg-primary text-foreground py-10 px-6 md:px-12 lg:px-24">
+      <div className="bg-background text-foreground py-10 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="flex justify-center">
               <Image
