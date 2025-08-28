@@ -8,7 +8,29 @@ import {
 
 export default function Overview() {
   return (
-    <div className="py-12">
+    <div className="py-12 bg-primary">
+              <div className="flex flex-col w-full justify-center">
+          <h2 className="text-4xl font-bold py-12 text-center">
+            Philosophy of Care
+          </h2>
+          <div className="flex flex-col max-w-4xl mx-auto px-6 gap-8 items-center pb-12">
+            <div className="flex-1 space-y-6">
+              <p className="text-lg leading-relaxed mb-6">
+                Healing is never one-size-fits-all. I believe in collaborative,
+                patient-drive care—where your goals and experiences are central
+                to the treatment process. Together, we&apos;ll create a space
+                where you feel seen, supported, and empowered to take charge of
+                your health. I also believe that treatment should educate as
+                much as it heals. Understanding why something hurts is just as
+                important as how we fix it. Through open communication, body
+                awareness, and individualized strategies, I aim to help you not
+                only recover—but thrive. My hope is that each patient walks away
+                not only feeling better, but with a deeper understanding of
+                their body and the tools to support their long-term health.
+              </p>
+            </div>
+          </div>
+        </div>
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
           Services That We Offer
@@ -27,9 +49,14 @@ export default function Overview() {
               />
             </div>
             <p className="text-muted-foreground">
-              A gentle hands-on technique that treats dysfunction in the fascial
-              system, nervous system, blood vessels, lymphatics, and more. Safe,
-              effective, and non-invasive.
+              A gentle manual therapy technique that is designed to alleviate
+              areas of trapped interstitial inflammation. It is a multi-system
+              approach with the goal of resolving chronic pain and idiopathic
+              vascular/visceral dysfunction. The observable clinic effects
+              include reduced pain, improved flexibility, improved tissue
+              health, normalization of muscle tone and restoration of normal
+              anatomical function. FCS can be used to treat a wide range of
+              conditions. Please visit counterstrain.com for more information.
             </p>
           </div>
           <div className="flex w-full flex-col text-center md:w-1/3">
@@ -68,56 +95,38 @@ export default function Overview() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col w-full justify-center bg-background">
-      <h2 className="text-4xl font-bold py-12 text-center">
-        Philosophy of Care
-      </h2>
-      <div className="flex flex-col max-w-4xl mx-auto px-6 gap-8 items-center pb-12">
-        <div className="flex-1 space-y-6">
-          <p className="text-lg leading-relaxed mb-6">
-            Healing is never one-size-fits-all. I believe in collaborative,
-            patient-drive care—where your goals and experiences are central to
-            the treatment process. Together, we&apos;ll create a space where you feel
-            seen, supported, and empowered to take charge of your health. I also
-            believe that treatment should educate as much as it heals.
-            Understanding why something hurts is just as important as how we fix
-            it. Through open communication, body awareness, and individualized
-            strategies, I aim to help you not only recover—but thrive. My hope
-            is that each patient walks away not only feeling better, but with a
-            deeper understanding of their body and the tools to support their
-            long-term health.
-          </p>
-        </div>
-      </div>
-    </div>
-        <div className="flex justify-center mt-8">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="font-semibold text-2xl">
-                Service Pricing
-              </AccordionTrigger>
-              <AccordionContent className="w-sm">
-                <ul className="space-y-3 text-lg leading-relaxed">
-                  <li className="flex justify-between items-center">
-                    <span>Initial evaluation (in-person):</span>
-                    <span className="font-semibold text-accent">$200</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span>Initial evaluation (telehealth):</span>
-                    <span className="font-semibold text-accent">$180</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span>Follow up (in-person):</span>
-                    <span className="font-semibold text-accent">$180</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span>Follow up (telehealth):</span>
-                    <span className="font-semibold text-accent">$150</span>
-                  </li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+
+        <div className="flex flex-col items-center justify-center mt-8">
+          <h3 className="font-semibold text-2xl text-center">
+            Service Pricing
+          </h3>
+          <div className="mt-4 md:mt-2">
+            <ul className="space-y-3 text-lg leading-relaxed">
+              <li className="flex items-center gap-8">
+                <span>Initial evaluation (in-person):</span>
+                <span className="font-semibold text-accent">$200</span>
+              </li>
+              <li className="flex justify-between items-center">
+                <span>Initial evaluation (telehealth):</span>
+                <span className="font-semibold text-accent">$180</span>
+              </li>
+              <li className="flex justify-between items-center">
+                <span>Follow up (in-person):</span>
+                <span className="font-semibold text-accent">$180</span>
+              </li>
+              <li className="flex justify-between items-center">
+                <span>Follow up (telehealth):</span>
+                <span className="font-semibold text-accent">$150</span>
+              </li>
+              <li className="flex justify-between items-center">
+              <span>In-home service:</span>
+              <span className="font-semibold text-accent">Inquire for pricing</span>
+              </li>
+            </ul>
+            <p className="text-center text-muted-foreground mt-4 text-sm">
+              (All one hour sessions)
+            </p>
+          </div>
         </div>
       </div>
     </div>

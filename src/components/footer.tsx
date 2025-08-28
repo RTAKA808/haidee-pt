@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-background border-t border-border py-12">
+    <footer className="w-full bg-primary border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-6">
           {/* Logo */}
           <div className="flex justify-center">
             <Link href="/">
               <Image
-                src="/assets/haidee-logo.png"
+                src="/assets/logonotext.png"
                 alt="Haidee Sui Physical Therapy Logo"
                 width={200}
                 height={60}

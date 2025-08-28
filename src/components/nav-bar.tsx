@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-background border-b border-border py-4">
-      <div className="container mx-auto px-6">
+    <nav className="w-full bg-primary border-b border-border py-3 sm:py-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Left Navigation */}
-          <div className="flex items-center space-x-4 sm:space-x-8">
+          <div className="flex items-center space-x-3 sm:space-x-6">
             <Link 
               href="/" 
               className="text-foreground hover:text-accent font-medium transition-colors duration-200 text-sm sm:text-base"
@@ -19,7 +19,7 @@ export default function Navbar() {
               href="/contact" 
               className="text-foreground hover:text-accent font-medium transition-colors duration-200 text-sm sm:text-base"
             >
-              Contact Us
+              Contact
             </Link>
           </div>
 
@@ -37,40 +37,42 @@ export default function Navbar() {
           </div> */}
 
           {/* Right CTA Button and Social Media */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Link 
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity duration-200"
+                className="hover:opacity-70 transition-opacity duration-200 p-1 rounded-lg hover:bg-accent/10 flex-shrink-0"
+                aria-label="Visit our Facebook page"
               >
                 <Image
                   src="/assets/facebook.png"
                   alt="Facebook"
                   width={28}
                   height={28}
-                  className="object-contain sm:w-5 sm:h-5"
+                  className="object-contain w-5 h-5 sm:w-6 sm:h-6"
                 />
               </Link>
               <Link 
                 href="https://www.instagram.com/haideesuipt/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity duration-200"
+                className="hover:opacity-70 transition-opacity duration-200 p-1 rounded-lg hover:bg-accent/10 flex-shrink-0"
+                aria-label="Visit our Instagram page"
               >
                 <Image
                   src="/assets/instagram.png"
                   alt="Instagram"
                   width={28}
                   height={28}
-                  className="object-contain sm:w-5 sm:h-5"
+                  className="object-contain w-7 h-7 sm:w-6 sm:h-6"
                 />
               </Link>
             </div>
             
-            <Button className="bg-accent hover:bg-accent/80 text-primary-foreground font-medium px-6 py-2 transition-colors duration-200">
+            <Button className="bg-accent hover:bg-accent/80 text-primary-foreground font-medium px-3 sm:px-6 py-2 transition-colors duration-200 text-xs sm:text-base flex-shrink-0">
               <Link href="/appointment" className="text-primary-foreground">
                 Book An Appointment
               </Link>
