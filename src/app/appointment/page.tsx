@@ -8,7 +8,7 @@ export default function AppointmentPage() {
           <h1 className="text-4xl font-bold mb-4">Book an Appointment</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to start your healing journey? Fill out the form below and I&apos;ll contact you 
-            within 24 hours to schedule your personalized physical therapy session.
+            within 1-3 business days to schedule your personalized physical therapy session.
           </p>
           <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">What to Expect:</h3>

@@ -125,7 +125,7 @@ export default function Overview() {
               </li>
             </ul>
             <p className="text-center text-muted-foreground mt-4 text-sm">
-              (All one hour sessions)
+              (All sessions are approximately one hour)
             </p>
           </div>
         </div>
