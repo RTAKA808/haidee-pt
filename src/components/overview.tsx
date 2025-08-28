@@ -36,6 +36,24 @@ export default function Overview() {
           Services That We Offer
         </h2>
         <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex w-full flex-col text-center md:w-1/3">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">
+              HOLISTIC ASSESSMENT
+            </h3>
+            <div className="relative mb-4 h-64 w-full overflow-hidden rounded-lg">
+              <Image
+                src="/assets/pt-stockphoto-2.jpg"
+                alt="Modern physical therapy treatment room"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <p className="text-muted-foreground">
+              We don&apos;t just chase symptoms. I take the time to understand your
+              full health picture—from past injuries and chronic pain to
+              emotional stress and lifestyle patterns.
+            </p>
+          </div>
           <div className="flex w-full flex-col text-center md:w-1/3">
             <h3 className="mb-4 text-xl font-semibold text-foreground">
               FASCIAL COUNTERSTRAIN (FCS)
@@ -56,27 +74,10 @@ export default function Overview() {
               include reduced pain, improved flexibility, improved tissue
               health, normalization of muscle tone and restoration of normal
               anatomical function. FCS can be used to treat a wide range of
-              conditions. Please visit counterstrain.com for more information.
+              conditions. Please visit <a href="https://counterstrain.com/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 underline transition-colors duration-200">counterstrain.com</a> for more information.
             </p>
           </div>
-          <div className="flex w-full flex-col text-center md:w-1/3">
-            <h3 className="mb-4 text-xl font-semibold text-foreground">
-              HOLISTIC ASSESSMENT
-            </h3>
-            <div className="relative mb-4 h-64 w-full overflow-hidden rounded-lg">
-              <Image
-                src="/assets/pt-stockphoto-2.jpg"
-                alt="Modern physical therapy treatment room"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <p className="text-muted-foreground">
-              We don’t just chase symptoms. I take the time to understand your
-              full health picture—from past injuries and chronic pain to
-              emotional stress and lifestyle patterns.
-            </p>
-          </div>
+
           <div className="flex w-full flex-col text-center md:w-1/3">
             <h3 className="mb-4 text-xl font-semibold text-foreground">
               PATIENT EDUCATION & MOVEMENT COACHING

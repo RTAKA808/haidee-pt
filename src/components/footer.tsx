@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Social Media Icons */}
           <div className="flex justify-center items-center space-x-6 pt-4">
             <Link 
-              href="https://facebook.com" 
+              href="https://www.facebook.com/profile.php?id=61579726868070" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity duration-200"

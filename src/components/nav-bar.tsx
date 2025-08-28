@@ -41,7 +41,7 @@ export default function Navbar() {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Link 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=61579726868070" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity duration-200 p-1 rounded-lg hover:bg-accent/10 flex-shrink-0"
