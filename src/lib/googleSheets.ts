@@ -5,6 +5,8 @@ interface ContactFormData {
   email: string;
   phone: string;
   preferredContact: "email" | "phone" | "text";
+  howDidYouHear: "google" | "instagram" | "facebook" | "referral" | "other";
+  otherSource?: string;
   subject: string;
   message: string;
   formType?: string;
@@ -50,6 +52,8 @@ export async function logToGoogleSheets(formData: ContactFormData) {
       formData.email,
       formData.phone,
       formData.preferredContact,
+      formData.howDidYouHear,
+      formData.otherSource || '',
       formData.subject,
       formData.message,
       formData.formType || 'Contact Form'
@@ -58,7 +62,7 @@ export async function logToGoogleSheets(formData: ContactFormData) {
     // Append data to sheet
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_SHEET_ID,
-      range: 'Sheet1!A:H', // Assuming default sheet name
+      range: 'Sheet1!A:J', // Updated to include new fields
       valueInputOption: 'RAW',
       requestBody: {
         values: [rowData],

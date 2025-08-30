@@ -101,32 +101,44 @@ export default function Overview() {
           <h3 className="font-semibold text-2xl text-center">
             Service Pricing
           </h3>
-          <div className="mt-4 md:mt-2">
-            <ul className="space-y-3 text-lg leading-relaxed">
-              <li className="flex items-center gap-8">
-                <span>Initial evaluation (in-person):</span>
-                <span className="font-semibold text-accent">$200</span>
+          <div className="mt-4 md:mt-2 text-center">
+            <ul className="space-y-3 text-lg leading-relaxed inline-block">
+              <li className="grid grid-cols-2 gap-8 items-center">
+                <span className="text-left">Initial evaluation (in-person):</span>
+                <span className="font-semibold text-accent text-right">$200</span>
               </li>
-              <li className="flex justify-between items-center">
-                <span>Initial evaluation (telehealth):</span>
-                <span className="font-semibold text-accent">$180</span>
+              <li className="grid grid-cols-2 gap-8 items-center">
+                <span className="text-left">Initial evaluation (telehealth):</span>
+                <span className="font-semibold text-accent text-right">$180</span>
               </li>
-              <li className="flex justify-between items-center">
-                <span>Follow up (in-person):</span>
-                <span className="font-semibold text-accent">$180</span>
+              <li className="grid grid-cols-2 gap-8 items-center">
+                <span className="text-left">Follow up (in-person):</span>
+                <span className="font-semibold text-accent text-right">$180</span>
               </li>
-              <li className="flex justify-between items-center">
-                <span>Follow up (telehealth):</span>
-                <span className="font-semibold text-accent">$150</span>
+              <li className="grid grid-cols-2 gap-8 items-center">
+                <span className="text-left">Follow up (telehealth):</span>
+                <span className="font-semibold text-accent text-right">$150</span>
               </li>
-              <li className="flex justify-between items-center">
-              <span>In-home service:</span>
-              <span className="font-semibold text-accent">Inquire for pricing</span>
+              <li className="grid grid-cols-2 gap-8 items-center">
+                <span className="text-left">In-home service:</span>
+                <span className="font-semibold text-accent text-right">Inquire for pricing</span>
               </li>
             </ul>
             <p className="text-center text-muted-foreground mt-4 text-sm">
               (All sessions are approximately one hour)
             </p>
+            
+            <div className="mt-8 p-6">
+              <h4 className="font-semibold text-lg text-center mb-4">
+                Payment & Insurance Information
+              </h4>
+              <p className="text-center text-muted-foreground leading-relaxed">
+                I&apos;m a cash-based, fee-for-service provider. Payment is due at each visit, 
+                and I can give you a superbill to submit for possible out-of-network reimbursement. 
+                Please note that I am not contracted with insurance plans, and reimbursement is 
+                dependent on your individual policy.
+              </p>
+            </div>
           </div>
         </div>
       </div>
