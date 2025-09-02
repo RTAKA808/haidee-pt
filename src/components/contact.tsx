@@ -35,6 +35,8 @@ const formSchema = z.object({
     message: "Please enter a valid phone number.",
   }),
   preferredContact: z.enum(["email", "phone", "text"]),
+  howDidYouHear: z.enum(["google", "instagram", "facebook","referral", "other"]),
+  otherSource: z.string().optional(),
   subject: z.string().min(5, {
     message: "Subject must be at least 5 characters.",
   }),
@@ -56,6 +58,8 @@ export default function Contact() {
       email: "",
       phone: "",
       preferredContact: "email",
+      howDidYouHear: "google",
+      otherSource: "",
       subject: "",
       message: "",
     },
@@ -179,7 +183,50 @@ export default function Contact() {
                 </FormItem>
               )}
             />
+
+            {/* How did you hear about us */}
+            <FormField
+              control={form.control}
+              name="howDidYouHear"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>How did you hear about us?</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select an option" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="google">Google Search</SelectItem>
+                      <SelectItem value="instagram">Instagram</SelectItem>
+                      <SelectItem value="referral">Referral</SelectItem>
+                      <SelectItem value="facebook">Facebook</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </div>
+
+          {/* Other Source Field - only show when "other" is selected */}
+          {form.watch("howDidYouHear") === "other" && (
+            <FormField
+              control={form.control}
+              name="otherSource"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Please specify how you heard about us</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., flyer, advertisement, event..." {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
 
           {/* Subject Field */}
           <FormField

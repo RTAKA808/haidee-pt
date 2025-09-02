@@ -10,6 +10,8 @@ interface ContactFormData {
   email: string;
   phone: string;
   preferredContact: "email" | "phone" | "text";
+  howDidYouHear: "google" | "instagram" | "facebook" | "referral" | "other";
+  otherSource?: string;
   subject: string;
   message: string;
 }
@@ -58,6 +60,11 @@ function generateHaideeEmail(formData: ContactFormData): string {
           <div class="field">
             <div class="label">Preferred Contact Method:</div>
             <div class="value">${formData.preferredContact.charAt(0).toUpperCase() + formData.preferredContact.slice(1)}</div>
+          </div>
+          
+          <div class="field">
+            <div class="label">How did you hear about us:</div>
+            <div class="value">${formData.howDidYouHear.charAt(0).toUpperCase() + formData.howDidYouHear.slice(1).replace('_', ' ')}${formData.otherSource ? ` - ${formData.otherSource}` : ''}</div>
           </div>
           
           <div class="field">
