@@ -67,6 +67,34 @@ export default function Footer() {
                 className="object-contain"
               />
             </Link>
+            <Link 
+              href="https://www.yelp.com/biz/haidee-sui-physical-therapy-burlingame" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity duration-200"
+            >
+              <Image
+                src="/assets/yelp.png"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </Link>
+            <Link 
+              href="https://www.google.com/search?sca_esv=d208b92db3ea8890&sxsrf=AE3TifORGT1xTzejFQXgRV90TXWkagzOtA:1757021115767&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E65Ih-ya0vd684LPBoVjyR2RYQ6sk4jpReyc9j8X7HgwQm6mCWdjq3IF1JG7RUAWTM9ZaqMVVICT27k-cmbveY7mKfOe2AqBrs4M5YUbx8Sl_XPzaA%3D%3D&q=Haidee+Sui+Physical+Therapy+Reviews&sa=X&ved=2ahUKEwjNmN_bhcCPAxXPDTQIHSVLMWUQ0bkNegQIIBAE&biw=3440&bih=1294&dpr=1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity duration-200"
+            >
+              <Image
+                src="/assets/google.png"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </Link>
           </div>
           
           {/* Copyright */}
