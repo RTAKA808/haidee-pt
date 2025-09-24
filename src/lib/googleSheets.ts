@@ -52,11 +52,12 @@ export async function logToGoogleSheets(formData: ContactFormData) {
       formData.email,
       formData.phone,
       formData.preferredContact,
-      formData.howDidYouHear,
-      formData.otherSource || '',
       formData.subject,
       formData.message,
-      formData.formType || 'Contact Form'
+      formData.formType || 'Contact Form',
+      formData.howDidYouHear,
+      formData.otherSource || '',
+      '' // Empty status column
     ];
 
     // Append data to sheet
