@@ -6,8 +6,8 @@ export type PriceRow = {
 
 export const PHYSICAL_THERAPY_PRICING: PriceRow[] = [
   { name: "Initial Evaluation", detail: "60 minutes", price: "$200" },
-  { name: "Follow-Up Treatment", detail: "50 minutes", price: "$180" },
-  { name: "5-Visit Follow-Up Package", price: "$850" },
+  { name: "Follow-Up Treatment", detail: "45 minutes", price: "$180" },
+  { name: "5-Visit Follow-Up Package", detail: "$170 per visit", price: "$850" },
 ];
 
 export const WELLNESS_PRICING: PriceRow[] = [

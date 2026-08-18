@@ -1,10 +1,37 @@
+import Link from "next/link";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FAQ_ITEMS } from "@/lib/faq";
+import { FAQ_ITEMS, type FaqBlock } from "@/lib/faq";
+
+function AnswerBlock({ block }: { block: FaqBlock }) {
+  if (block.kind === "ul") {
+    return (
+      <ul className="space-y-1 pl-1">
+        {block.items.map((item) => (
+          <li key={item}>• {item}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  if (block.kind === "link") {
+    return (
+      <Link
+        href={block.href}
+        className="text-accent hover:text-accent/80 font-semibold underline-offset-4 transition-colors hover:underline"
+      >
+        {block.label}
+      </Link>
+    );
+  }
+
+  return <p>{block.text}</p>;
+}
 
 export default function FaqSection() {
   return (
@@ -22,8 +49,8 @@ export default function FaqSection() {
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground space-y-3 text-base leading-relaxed">
-                  {item.answer.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                  {item.answer.map((block, index) => (
+                    <AnswerBlock key={index} block={block} />
                   ))}
                 </AccordionContent>
               </AccordionItem>
