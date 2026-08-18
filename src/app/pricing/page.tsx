@@ -23,9 +23,6 @@ export default function PricingPage() {
       <section className="bg-background py-16">
         <div className="container mx-auto px-6">
           <h1 className="text-center text-4xl font-bold">Services & Pricing</h1>
-          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-lg">
-            Straightforward rates, with no insurance restrictions on your care.
-          </p>
 
           <div className="bg-card mx-auto mt-10 max-w-2xl rounded-lg p-8 shadow-sm">
             <h2 className="text-xl font-bold">Physical Therapy</h2>

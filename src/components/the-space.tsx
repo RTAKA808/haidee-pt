@@ -11,6 +11,11 @@ const PHOTOS = [
     alt: "Exercise space with a squat rack, bench, weights, and kettlebells",
     caption: "Gym Space",
   },
+  {
+    src: "/assets/haidee-movement.jpg",
+    alt: "Haidee guiding a patient through a balance exercise",
+    caption: "Working Together",
+  },
 ];
 
 export default function TheSpace() {
@@ -32,13 +37,13 @@ export default function TheSpace() {
 
         <div className="mx-auto mt-12 flex max-w-5xl flex-col gap-8 md:flex-row">
           {PHOTOS.map((photo) => (
-            <figure key={photo.src} className="w-full md:w-1/2">
-              <div className="relative h-72 w-full overflow-hidden rounded-lg shadow-sm">
+            <figure key={photo.src} className="w-full md:w-1/3">
+              <div className="relative h-64 w-full overflow-hidden rounded-lg shadow-sm">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover"
                 />
               </div>

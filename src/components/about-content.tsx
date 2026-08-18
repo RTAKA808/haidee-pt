@@ -32,7 +32,7 @@ export default function About() {
             get back to doing what you love.
           </p>
           <p className="text-lg leading-relaxed">
-            Those experiences—and my curiosity about the human body—eventually
+            Those experiences and my curiosity about the human body eventually
             led me to physical therapy.
           </p>
           <p className="text-lg leading-relaxed">
@@ -45,10 +45,20 @@ export default function About() {
             .
           </p>
           <p className="text-lg leading-relaxed">
-            My clinical experience includes several years in an outpatient
-            hospital environment working with individuals ranging from young
-            athletes to adults in their 90s, with a particular focus on
-            orthopedics and chronic pain.
+            My clinical experience includes several years in both outpatient and
+            inpatient hospital environments working with individuals ranging
+            from young athletes to adults in their 90s, with a particular focus
+            on orthopedics and chronic pain.
+          </p>
+          <p className="text-lg leading-relaxed">
+            I&apos;ve always had a passion for learning and a curiosity to
+            understand the &ldquo;why&rdquo; behind what I see in the clinic.
+            That curiosity continues to shape me as a physical therapist and
+            motivates me to continually expand my knowledge, challenge my
+            thinking, and grow as a clinician. I believe that learning is an
+            ongoing process, and I&apos;m committed to evolving my approach so I
+            can continue to provide thoughtful, individualized care for each
+            person I work with.
           </p>
           <p className="text-lg leading-relaxed">
             Today, my practice is built around three values:
@@ -59,6 +69,9 @@ export default function About() {
           <p className="text-lg leading-relaxed">
             My goal is to help you understand your body, feel confident in your
             movement, and become an active participant in your own health.
+          </p>
+          <p className="text-lg leading-relaxed">
+            I look forward to working with you.
           </p>
         </div>
       </div>
