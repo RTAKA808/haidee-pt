@@ -1,32 +1,60 @@
 import Contact from "@/components/contact";
 
+const WHAT_TO_EXPECT = [
+  {
+    title: "Initial Consultation",
+    body: "We'll discuss your goals and concerns",
+  },
+  {
+    title: "Assessment",
+    body: "Comprehensive evaluation of your condition",
+  },
+  {
+    title: "Personalized Plan",
+    body: "Treatment plan tailored to your needs",
+  },
+  {
+    title: "Ongoing Support",
+    body: "Regular check-ins and plan adjustments",
+  },
+];
+
 export default function AppointmentPage() {
   return (
-    <div className="min-h-screen bg-">
-      <div className="w-full max-w-4xl mx-auto px-6 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Book an Appointment</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start your healing journey? Fill out the form below and I&apos;ll contact you 
-            within 1-3 business days to schedule your personalized physical therapy session.
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto w-full max-w-4xl px-6 pt-12">
+        <div className="text-center">
+          <h1 className="mb-4 text-4xl font-bold">Book an Appointment</h1>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            Ready to start your healing journey? Fill out the form below and
+            I&apos;ll contact you within 1-3 business days to schedule your
+            personalized physical therapy session.
           </p>
-          <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">What to Expect:</h3>
-            <ul className="text-left text-blue-800 space-y-2">
-              <li>• <strong>Initial Consultation:</strong> We&apos;ll discuss your goals and concerns</li>
-              <li>• <strong>Assessment:</strong> Comprehensive evaluation of your condition</li>
-              <li>• <strong>Personalized Plan:</strong> Treatment plan tailored to your needs</li>
-              <li>• <strong>Ongoing Support:</strong> Regular check-ins and plan adjustments</li>
-            </ul>
+        </div>
+
+        <div className="bg-card mt-10 rounded-lg p-8">
+          <h2 className="mb-6 text-center text-lg font-semibold">
+            What to Expect
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {WHAT_TO_EXPECT.map((step) => (
+              <div key={step.title}>
+                <p className="text-accent font-semibold">{step.title}</p>
+                <p className="text-muted-foreground">{step.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <Contact />
+
+      <Contact showHeading={false} />
     </div>
   );
 }
 
 export const metadata = {
-  title: "Book an Appointment - Haidee PT",
-  description: "Schedule your personalized physical therapy session with Haidee. Get started on your healing journey today.",
+  // The root layout appends "| Haidee Sui PT", so the brand is not repeated here.
+  title: "Book an Appointment",
+  description:
+    "Schedule your personalized physical therapy session with Haidee Sui, PT, DPT in Burlingame. Get started on your healing journey today.",
 };

@@ -47,7 +47,11 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export default function Contact() {
+/**
+ * `showHeading` lets a page that already has its own title (like /appointment)
+ * render just the form, instead of stacking a second competing heading.
+ */
+export default function Contact({ showHeading = true }: { showHeading?: boolean }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -96,13 +100,16 @@ export default function Contact() {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-6 py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Ready to start your wellness journey? I&apos;d love to hear from you. 
-          Send me a message and I&apos;ll get back to you as soon as possible.
-        </p>
-      </div>
+      {showHeading && (
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Ready to start your wellness journey? I&apos;d love to hear from
+            you. Send me a message and I&apos;ll get back to you within 1-3
+            business days.
+          </p>
+        </div>
+      )}
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

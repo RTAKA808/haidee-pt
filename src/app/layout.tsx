@@ -70,9 +70,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code", // Replace with actual code when you get it
-  },
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
