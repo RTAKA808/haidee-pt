@@ -3,8 +3,6 @@ import { Resend } from 'resend';
 
 import { logToGoogleSheets } from '@/lib/googleSheets';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 interface ContactFormData {
   name: string;
   email: string;
@@ -188,6 +186,11 @@ export async function POST(request: NextRequest) {
       );
     }
     
+    // Built per request rather than at module scope: the Resend constructor
+    // throws on a missing key, and at module scope that runs while Next
+    // collects page data, which fails the build anywhere the key is absent.
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     // Generate email content
     const haideeEmailHtml = generateHaideeEmail(body);
     const thankYouEmailHtml = generateThankYouEmail(body);
