@@ -50,8 +50,18 @@ type FormValues = z.infer<typeof formSchema>;
 /**
  * `showHeading` lets a page that already has its own title (like /appointment)
  * render just the form, instead of stacking a second competing heading.
+ *
+ * `formType` is what tells the notification email which form was used — every
+ * page that renders this form must pass its own value. The server only accepts
+ * the values in FORM_TYPES.
  */
-export default function Contact({ showHeading = true }: { showHeading?: boolean }) {
+export default function Contact({
+  showHeading = true,
+  formType = "General Inquiry",
+}: {
+  showHeading?: boolean;
+  formType?: string;
+}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -79,7 +89,7 @@ export default function Contact({ showHeading = true }: { showHeading?: boolean 
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, formType }),
       });
 
       if (response.ok) {

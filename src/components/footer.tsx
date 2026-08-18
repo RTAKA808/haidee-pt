@@ -29,10 +29,10 @@ export default function Footer() {
             </p>
             <p className="text-muted-foreground">
               <Link
-                href="tel:+16507403009"
+                href="tel:+16504881108"
                 className="hover:text-accent transition-colors duration-200"
               >
-                (650) 740-3009
+                (650) 488-1108
               </Link>
             </p>
             <p className="text-muted-foreground">

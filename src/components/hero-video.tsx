@@ -145,11 +145,7 @@ export default function HeroVideo() {
         <h1 className="text-4xl font-bold leading-tight md:text-5xl">
           Move Better. Feel Stronger. Live With Confidence.
         </h1>
-        <p className="mt-6 text-lg font-semibold md:text-xl">
-          Personalized physical therapy, wellness, and strength-focused care in
-          Burlingame.
-        </p>
-        <p className="mt-4 text-base leading-relaxed text-white/90 md:text-lg">
+        <p className="mt-6 text-base leading-relaxed text-white/90 md:text-lg">
           One-on-one treatment and small-group programs designed to help you
           recover from injury, manage persistent pain, build strength, and feel
           more confident in your body.
@@ -168,7 +164,9 @@ export default function HeroVideo() {
             variant="outline"
             className="rounded-xl border-white/70 bg-white/10 px-6 py-3 text-base text-white hover:bg-white hover:text-foreground"
           >
-            <Link href="/contact">Schedule a Free 15-Minute Consultation</Link>
+            <Link href="/consultation">
+              Schedule a Free 15-Minute Consultation
+            </Link>
           </Button>
         </div>
         <p className="mt-8 text-sm italic tracking-wide text-white/80">

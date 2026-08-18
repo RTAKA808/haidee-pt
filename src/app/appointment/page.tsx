@@ -47,7 +47,7 @@ export default function AppointmentPage() {
         </div>
       </div>
 
-      <Contact showHeading={false} />
+      <Contact showHeading={false} formType="Appointment Request" />
     </div>
   );
 }

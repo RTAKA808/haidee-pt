@@ -3,6 +3,27 @@ import { Resend } from 'resend';
 
 import { logToGoogleSheets } from '@/lib/googleSheets';
 
+/**
+ * Which form the submission came from. Whitelisted rather than trusted, since
+ * this value ends up in the email subject and sender name — a caller must not
+ * be able to put arbitrary text into a mail header.
+ */
+const FORM_TYPES = [
+  "Appointment Request",
+  "Free 15-Minute Consultation",
+  "General Inquiry",
+] as const;
+
+type FormType = (typeof FORM_TYPES)[number];
+
+const DEFAULT_FORM_TYPE: FormType = "General Inquiry";
+
+function resolveFormType(value: unknown): FormType {
+  return FORM_TYPES.includes(value as FormType)
+    ? (value as FormType)
+    : DEFAULT_FORM_TYPE;
+}
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -12,9 +33,10 @@ interface ContactFormData {
   otherSource?: string;
   subject: string;
   message: string;
+  formType?: string;
 }
 
-function generateHaideeEmail(formData: ContactFormData): string {
+function generateHaideeEmail(formData: ContactFormData, formType: FormType): string {
   return `
     <!DOCTYPE html>
     <html>
@@ -36,10 +58,15 @@ function generateHaideeEmail(formData: ContactFormData): string {
     <body>
       <div class="container">
         <div class="header">
-          <h1>New Contact Form Submission</h1>
+          <h1>${formType}</h1>
           <p>Someone has contacted you through your website</p>
         </div>
         <div class="content">
+          <div class="field">
+            <div class="label">Submitted via:</div>
+            <div class="value"><strong>${formType}</strong></div>
+          </div>
+
           <div class="field">
             <div class="label">Name:</div>
             <div class="value">${formData.name}</div>
@@ -192,15 +219,17 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Generate email content
-    const haideeEmailHtml = generateHaideeEmail(body);
+    const formType = resolveFormType(body.formType);
+    const haideeEmailHtml = generateHaideeEmail(body, formType);
     const thankYouEmailHtml = generateThankYouEmail(body);
-    
+
     try {
-      // Send email to Haidee
+      // Send email to Haidee. The form type leads the subject and sender name
+      // so the two forms are distinguishable in an inbox list, without opening.
       await resend.emails.send({
-        from: `Contact Form <${process.env.FROM_EMAIL}>`,
+        from: `${formType} <${process.env.FROM_EMAIL}>`,
         to: [process.env.HAIDEE_EMAIL!],
-        subject: `New Contact Form: ${body.subject}`,
+        subject: `${formType}: ${body.subject}`,
         html: haideeEmailHtml,
       });
 
@@ -215,7 +244,7 @@ export async function POST(request: NextRequest) {
       // Log to Google Sheets (after successful email sending)
       await logToGoogleSheets({
         ...body,
-        formType: 'Contact Form'
+        formType,
       });
 
       return NextResponse.json({ success: true });
