@@ -27,7 +27,9 @@ export default function CtaSection() {
             variant="outline"
             className="border-accent text-accent hover:bg-accent hover:text-primary-foreground rounded-xl px-8 text-base"
           >
-            <Link href="/contact">Schedule a Free 15-Minute Consultation</Link>
+            <Link href="/consultation">
+              Schedule a Free 15-Minute Consultation
+            </Link>
           </Button>
         </div>
       </div>
