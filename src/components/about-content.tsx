@@ -2,52 +2,63 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col w-full items-center justify-center bg-background">
-      <h1 className="text-4xl font-bold py-12 text-center">About Me</h1>
-      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-6 gap-8 lg:gap-12 items-center lg:items-start">
-        <div className="flex-shrink-0">
+    <div className="bg-background flex w-full flex-col items-center justify-center py-12">
+      <h1 className="py-8 text-center text-4xl font-bold">Meet Haidee</h1>
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 lg:flex-row lg:items-start lg:gap-12">
+        <div className="shrink-0">
           <Image
             src="/assets/haideeprofile.jpg"
-            alt="Haidee Profile Picture"
+            alt="Haidee Sui, PT, DPT"
             height={500}
             width={400}
-            className="object-cover rounded-full shadow-lg"
+            className="rounded-full object-cover shadow-lg"
           />
         </div>
         <div className="flex-1 space-y-6 pb-6">
-          <p className="text-lg leading-relaxed mb-6">
-            After years of working in the tech industry, I knew I was meant for
-            something more—something that would challenge me, fulfill me, and
-            make a tangible difference in people’s lives. Sports have always
-            been a big part of my world, especially competitive basketball.
-            Along with the love of the game came my fair share of injuries, and
-            with them, countless hours of rehabilitation. Those experiences left
-            a lasting impression—it wasn&apos;t just the relief of healing, but
-            also the compassion, skill, and encouragement of the people who
-            helped me recover.
+          <h2 className="text-2xl font-semibold">Haidee Sui, PT, DPT</h2>
+
+          <p className="text-lg leading-relaxed">
+            My path to becoming a physical therapist started with the feeling
+            that something was missing.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
-            That blend of personal experience and my curiosity about the human
-            body eventually led me to my passion: physical therapy. After
-            earning my Doctor of Physical Therapy degree from the University of
-            California, San Francisco and San Francisco State University, I
-            pursued additional training through the Jones Institute in Fascial
-            Counterstrain—a technique that aligns with my holistic philosophy of
-            care.
+          <p className="text-lg leading-relaxed">
+            After years working in the Human Resources technology industry, I
+            wanted a career that allowed me to connect more deeply with people
+            and make a meaningful difference in their lives.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
-            For the past three years, I&apos;ve worked in an outpatient hospital
-            setting, treating patients from ages 9 to late 90&apos;s. My focus
-            has been orthopedics and chronic pain care, and I&apos;ve helped
-            individuals restore function, reduce pain, and reclaim their quality
-            of life.
+          <p className="text-lg leading-relaxed">
+            Having grown up playing competitive basketball, I was already very
+            familiar with injuries, rehabilitation, and the process of trying to
+            get back to doing what you love.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
-            When treating patients, I bring an empathetic, patient-centered
-            approach to every session. My goal is to go beyond treating
-            symptoms—to help you truly understand your body, build confidence in
-            your movement, and feel empowered in your journey toward lasting
-            wellness. I look forward to working with you.
+          <p className="text-lg leading-relaxed">
+            Those experiences—and my curiosity about the human body—eventually
+            led me to physical therapy.
+          </p>
+          <p className="text-lg leading-relaxed">
+            I earned my degree in Psychology from{" "}
+            <strong>UC Davis</strong> and my{" "}
+            <strong>
+              Doctor of Physical Therapy degree through UCSF and San Francisco
+              State University
+            </strong>
+            .
+          </p>
+          <p className="text-lg leading-relaxed">
+            My clinical experience includes several years in an outpatient
+            hospital environment working with individuals ranging from young
+            athletes to adults in their 90s, with a particular focus on
+            orthopedics and chronic pain.
+          </p>
+          <p className="text-lg leading-relaxed">
+            Today, my practice is built around three values:
+          </p>
+          <p className="text-accent text-xl font-bold">
+            Curiosity. Empathy. Collaboration.
+          </p>
+          <p className="text-lg leading-relaxed">
+            My goal is to help you understand your body, feel confident in your
+            movement, and become an active participant in your own health.
           </p>
         </div>
       </div>

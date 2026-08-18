@@ -28,8 +28,16 @@ export default function Footer() {
               Burlingame, CA
             </p>
             <p className="text-muted-foreground">
+              <Link
+                href="tel:+16507403009"
+                className="hover:text-accent transition-colors duration-200"
+              >
+                (650) 740-3009
+              </Link>
+            </p>
+            <p className="text-muted-foreground">
               <Link 
-                href="mailto:hello@haideesui.com" 
+                href="mailto:haideesuipt@gmail.com"
                 className="hover:text-accent transition-colors duration-200"
               >
                 haideesuipt@gmail.com
@@ -75,7 +83,7 @@ export default function Footer() {
             >
               <Image
                 src="/assets/yelp.png"
-                alt="Instagram"
+                alt="Yelp"
                 width={24}
                 height={24}
                 className="object-contain"
@@ -89,7 +97,7 @@ export default function Footer() {
             >
               <Image
                 src="/assets/google.png"
-                alt="Instagram"
+                alt="Google"
                 width={24}
                 height={24}
                 className="object-contain"
@@ -97,6 +105,11 @@ export default function Footer() {
             </Link>
           </div>
           
+          {/* Tagline */}
+          <p className="text-foreground pt-2 text-sm font-semibold italic tracking-wide">
+            Restore • Rebuild • Renew
+          </p>
+
           {/* Copyright */}
           <div className="pt-6 border-t border-border">
             <p className="text-muted-foreground text-sm italic">
